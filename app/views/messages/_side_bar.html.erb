@@ -8,10 +8,10 @@
 </div>
 
 <div class="countries">
- <% @country.each do |country| %>
+  <% @name.each do |country| %>
     <div class="country">
       <div class="country-name">
-        <a href="#"><%= country.name %></a>
+        <%= link_to country.name, country_messages_path(country) %>
       </div>
     </div>
   <% end %>
