@@ -3,6 +3,7 @@ class MessagesController < ApplicationController
     @name = Country.all
     @message = Message.new
     @country = Country.find(params[:country_id])
+    @messages = @country.messages.includes(:user)
   end
 
   def create
@@ -11,6 +12,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to country_messages_path(@country)
     else
+      @messages = @country.messages.includes(:user)
       render :index
     end
   end
