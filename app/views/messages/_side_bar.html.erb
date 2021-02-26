@@ -3,16 +3,19 @@
     <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
   <div class="create-country">
-    <%= link_to "国を作成する", new_country_path %>
+    <a href="#">チャットを作成する</a>
   </div>
 </div>
 
 <div class="countries">
- <% @country.each do |country| %>
-    <div class="country">
-      <div class="country-name">
-        <a href="#"><%= country.name %></a>
-      </div>
+ <div class="country">
+    <div class="country-name">
+      <a href="#">techroom1</a>
     </div>
-  <% end %>
+  </div>
+  <div class="country">
+    <div class="country-name">
+      <a href="#">techroom2</a>
+    </div>
+  </div>
 </div>
