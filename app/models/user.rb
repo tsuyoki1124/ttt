@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
+
+  has_many :country_users
+  has_many :countries, through: :country_users
 end
