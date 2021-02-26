@@ -1,5 +1,6 @@
 class CountriesController < ApplicationController
-
+  before_action :name
+  
   def index
     @country = Country.all
   end
@@ -17,10 +18,20 @@ class CountriesController < ApplicationController
     end
   end
 
+  def destroy
+    country = Country.find(params[:id])
+    country.destroy
+    redirect_to root_path
+  end
+
   private
 
   def country_params
     params.require(:country).permit(:name)
+  end
+
+  def name
+    @name = Country.all
   end
   
 
