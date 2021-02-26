@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
+  before_action :name
+
   def index
-    @name = Country.all
     @message = Message.new
     @country = Country.find(params[:country_id])
     @messages = @country.messages.includes(:user)
@@ -21,5 +22,9 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:title, :text).merge(user_id: current_user.id)
+  end
+
+  def name
+    @name = Country.all
   end
 end
