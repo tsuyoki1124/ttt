@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_26_133249) do
+ActiveRecord::Schema.define(version: 2021_02_26_145233) do
 
   create_table "countries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 2021_02_26_133249) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["country_id"], name: "index_country_users_on_country_id"
     t.index ["user_id"], name: "index_country_users_on_user_id"
+  end
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "text", null: false
+    t.bigint "country_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["country_id"], name: "index_messages_on_country_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -42,4 +53,6 @@ ActiveRecord::Schema.define(version: 2021_02_26_133249) do
 
   add_foreign_key "country_users", "countries"
   add_foreign_key "country_users", "users"
+  add_foreign_key "messages", "countries"
+  add_foreign_key "messages", "users"
 end

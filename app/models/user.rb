@@ -8,4 +8,5 @@ class User < ApplicationRecord
 
   has_many :country_users
   has_many :countries, through: :country_users
+  has_many :messages
 end
