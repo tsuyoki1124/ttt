@@ -1,12 +1,12 @@
 class CountriesController < ApplicationController
   before_action :name
-  
+
   def index
     @country = Country.all
   end
 
   def new
-    @country = Country.new
+    @country = Country.newd
   end
 
   def create
