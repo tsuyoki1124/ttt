@@ -29,6 +29,18 @@ class MessagesController < ApplicationController
     message.destroy
   end
 
+  def edit
+    @message = Message.find(params[:id])
+    @country = Country.all
+    
+  end
+
+  def update
+    @message = Message.find(params[:id])
+    @message.update(message_params)
+  end
+
+
 
   private
 
