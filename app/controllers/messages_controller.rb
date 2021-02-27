@@ -24,6 +24,11 @@ class MessagesController < ApplicationController
     @messsages = @country.messages.includes(:user)
   end
 
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy
+  end
+
 
   private
 
