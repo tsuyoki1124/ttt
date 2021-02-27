@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "countries#index"
   resources :users, only: [:edit, :update]
   resources :countries, only: [:new, :create, :destroy] do
-    resources :messages, only: [:index, :create, :destroy]
+    resources :messages, only: [:index, :create, :destroy, :show]
   end
 
 end
