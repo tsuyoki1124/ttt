@@ -18,6 +18,13 @@ class MessagesController < ApplicationController
     end
   end
 
+  def show
+    @country = Country.find(params[:country_id])
+    @message = Message.find(params[:id])
+    @messsages = @country.messages.includes(:user)
+  end
+
+
   private
 
   def message_params

@@ -1,0 +1,20 @@
+<div class="message_show">
+  <div class="message-box">
+    <h2 class="name">
+      <%= @message.title %>
+    </h2>
+    <div class="message-img-content">
+      <%= image_tag @message.image.variant(resize: '500x500'), class:"message-box-img" %>
+    </div>
+    
+    <%# if user_signed_in? && current_user.id == @item.user_id %>
+    <%#= link_to "編集", edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
+    <%#<p class="or-text">or</p>
+    <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+    <%# end %>
+   
+    <div class="message-explain-box">
+      <span><%= @message.text %></span>
+    </div>
+  </div>
+</div>

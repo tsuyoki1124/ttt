@@ -18,6 +18,8 @@ class CountriesController < ApplicationController
     end
   end
 
+  
+
   def destroy
     country = Country.find(params[:id])
     country.destroy
