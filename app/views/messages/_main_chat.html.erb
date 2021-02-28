@@ -11,6 +11,9 @@
     </div>
     <% end %>
   </div>
+  <div class="user">
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+  </div>
 </div>
 
 <div class="messages">
