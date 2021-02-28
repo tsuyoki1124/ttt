@@ -2,16 +2,22 @@
   <div class="header-name">
   <% if user_signed_in? %>
     <%= link_to current_user.name, edit_user_path(current_user) %>
-  <% end %>
+    <% else %>
+      <div class="grid-6">
+        <%= link_to "ログイン", new_user_session_path, class: "post" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+      </div>
+    <% end %>
   </div>
-  
   <div class="create-country">
+  <% if user_signed_in? %>
     <%= link_to "国を作成する", new_country_path %>
+  <% end %>
   </div>
 </div>
 
-<div class="countries">
 
+<div class="countries">
   <% @name.each do |country| %>
     <div class="country">
       <div class="country-name">
