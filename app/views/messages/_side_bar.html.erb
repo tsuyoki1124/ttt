@@ -1,7 +1,10 @@
 <div class="side-bar-header">
   <div class="header-name">
+  <% if user_signed_in? %>
     <%= link_to current_user.name, edit_user_path(current_user) %>
+  <% end %>
   </div>
+  
   <div class="create-country">
     <%= link_to "国を作成する", new_country_path %>
   </div>

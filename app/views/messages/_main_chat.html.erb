@@ -5,8 +5,8 @@
     </div>
   </div>
   <div class="right-header">
-  <% if current_user.id == @country.user_id %>
-    <div class="header-button">
+    <% if user_signed_in? && current_user.id == @country.user_id %>
+      <div class="header-button">
       <%= link_to "チャットを終了する", country_path(@country), method: :delete %>
     </div>
     <% end %>
