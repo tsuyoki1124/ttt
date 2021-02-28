@@ -30,9 +30,8 @@ class MessagesController < ApplicationController
   end
 
   def edit
+    @country = Country.find(params[:country_id])
     @message = Message.find(params[:id])
-    @country = Country.all
-    
   end
 
   def update
