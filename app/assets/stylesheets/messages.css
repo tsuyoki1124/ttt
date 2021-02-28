@@ -15,24 +15,32 @@
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .header-name a{
-  font-size: 16px;
+  font-size: 30px;
   color: #FAFAFA;
   text-decoration: none;
 }
 
 .create-country a {
-  font-size: 10px;
-  border: 1px solid lightblue;
+  font-size: 40px;
   padding: 14px;
-  color: deepskyblue;
+  color: white;
   text-decoration: none;
+  position: fixed;
+  top: 650px;
+  left: 600px;
+}
+.create-country-message {
+  color: white;
+  font-size: 20px;
+  position: fixed;
+  top: 680px;
+  left: 850px;
 }
 
 .countries {
@@ -79,7 +87,6 @@
 
 .messages {
   background-color: #FAFAFA;
-  
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
   overflow: scroll;
