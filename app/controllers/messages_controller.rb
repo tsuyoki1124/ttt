@@ -22,6 +22,8 @@ class MessagesController < ApplicationController
     @country = Country.find(params[:country_id])
     @message = Message.find(params[:id])
     @messsages = @country.messages.includes(:user)
+    @comment = Comment.new
+    @comments = @message.comments.includes(:user)
   end
 
   def destroy
