@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  has_many :country_users
-  has_many :countries, through: :country_users
+  
+  has_many :countries
   has_many :messages
 end
