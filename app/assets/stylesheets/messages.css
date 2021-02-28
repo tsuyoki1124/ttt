@@ -7,7 +7,6 @@
 }
 
 .side-bar {
-  
   width: 300px;
   height: 100vh;
 }
@@ -21,11 +20,15 @@
 }
 
 .header-name a{
-  font-size: 30px;
+  font-size: 35px;
   color: #FAFAFA;
-  text-decoration: none;
+  
 }
 
+.user-name {
+  margin-left: 20px;
+}
+ 
 .create-country a {
   font-size: 40px;
   padding: 14px;
@@ -55,6 +58,7 @@
 .country-name a {
   text-decoration: none;
   color: white;
+  font-size: 22px;
 }
 .chat {
   background-color: #FFFFFF;
@@ -183,6 +187,7 @@
   left: 550px;
   font-size: 50px;
 }
+
 .post {
   color: white;
   text-decoration: none;
