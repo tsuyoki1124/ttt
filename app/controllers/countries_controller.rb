@@ -29,7 +29,7 @@ class CountriesController < ApplicationController
   private
 
   def country_params
-    params.require(:country).permit(:name)
+    params.require(:country).permit(:name).merge(user_id: current_user.id)
   end
 
   def name
