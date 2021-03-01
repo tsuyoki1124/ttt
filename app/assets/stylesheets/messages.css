@@ -89,11 +89,15 @@
   padding: 20px;
 }
 
-.messages {
+.messages-wrapper {
   background-color: #FAFAFA;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
   overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .message {
