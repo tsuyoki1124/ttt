@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @country = Country.find(params[:country_id])
-    @messages = @country.messages.includes(:user)
+    @messages = @country.messages.includes(:user).order("created_at DESC")
   end
 
   def create
