@@ -110,7 +110,7 @@
 
 .message-user {
   color: #434a54;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .message-date {
@@ -119,6 +119,13 @@
   padding-left: 10px;
 }
 
+.message-title {
+  font-size: 25px;
+}
+
+.message-text {
+  font-size: 20px;
+}
 .lower-message {
   margin-top: 10px;
 }
