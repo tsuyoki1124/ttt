@@ -1,24 +1,31 @@
 <div class="side-bar-header">
   <div class="header-name">
-  <% if user_signed_in? %>
-    <div class="user-name">
-    <%= link_to current_user.name, edit_user_path(current_user) %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="user-name">
+        <%= link_to current_user.name, edit_user_path(current_user) %>
+      </div>
     <% end %>
   </div>
-  
+
+  <% if user_signed_in? %>
+    <div class="user">
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'btn'%>
+    </div>
+  <% end %>
+
 </div>
 
 
 <div class="countries">
 <% if user_signed_in? %>
-  <% @name.each do |country| %>
-    <div class="country">
-      <div class="country-name">
-        <%= link_to country.name, country_messages_path(country) %>
+  <p>Countries</p> 
+    <% @name.each do |country| %>
+      <div class="country">
+        <div class="country-name">
+          <%= link_to country.name, country_messages_path(country) %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
   <% end %>
   
 </div>

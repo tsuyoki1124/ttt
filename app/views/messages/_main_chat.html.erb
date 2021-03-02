@@ -4,19 +4,29 @@
       <%= @country.name %>
     </div>
   </div>
+
   <div class="right-header">
-    <% if user_signed_in? && current_user.id == @country.user_id %>
-      <div class="header-button">
-      <%= link_to "チャットを終了する", country_path(@country), method: :delete %>
+      
+        <% if user_signed_in? %>
+        <div class="create-country-header">
+          <%= link_to "New Country", new_country_path %>
+          </div>
+        <% end %>
+      
+
+      <div class="close-country">
+        <% if user_signed_in? && current_user.id == @country.user_id %>
+          <div class="header-button">
+            <%= link_to "CLOSE Country", country_path(@country), method: :delete %>
+          </div>
+        <% end %>
+      </div>
+  
+
+      
+      
     </div>
-    <% end %>
   </div>
-  <div class="user">
-  <% if user_signed_in? %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
-  <% end %>
-  </div>
-</div>
 
 <div class="messages-wrapper">
     <%= render partial: 'message', collection: @messages %>
@@ -27,9 +37,9 @@
     <%= f.text_field :title, class: 'form-message', placeholder: 'type a title' %>
     <%= f.text_field :text, class: 'form-message', placeholder: 'type a text' %>
     <label class="form-image">
-      <span class="image-file">画像</span>
+      <span class="image-file">file</span>
       <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <%= f.submit '送信', class: 'form-submit' %>
+  <%= f.submit 'SEND', class: 'form-submit' %>
 <% end %>

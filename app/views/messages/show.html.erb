@@ -1,40 +1,83 @@
-<div class="message_show">
-  <div class="message-box">
-    <h2 class="name">
-      <%= @message.title %>
-    </h2>
-    <div class="message-img-content">
-      <%= image_tag @message.image.variant(resize: '500x500'), class:"message-box-img" %>
-    </div>
-    
-    <% if user_signed_in? && current_user.id == @message.user_id %>
-    <%= link_to "編集", edit_country_message_path(@message.id), method: :get, class: "item-red-btn" %>
-    <p class="or-text">or</p>
-    <%= link_to "削除", country_message_path(@message.id), method: :delete, class:"item-destroy" %>
-    <% end %>
-   
-    <div class="message-explain-box">
-      <span><%= @message.text %></span>
-    </div>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "side_bar" %>
   </div>
 
-  <div class="container">
-    <% if user_signed_in? %>
-      <%= form_with(model: [@country, @message, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
-      <% end %>
-    <% else %>
-      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-    <% end %>
-    <div class="comments">
-      <h4>＜コメント一覧＞</h4>
-      <% @comments.each do |comment| %>
-        <p>
-          <strong><%= comment.user.name %>：</strong>
-          <%= comment.text %>
-        </p>
-      <% end %>
+  <div class="message_show">
+    <div class="image-opacity">
+      <div class="chat-header">
+        <div class="left-header">
+          <div class="header-title">
+            <%= @country.name %>
+          </div>
+        </div>
+
+        <div class="right-header">
+          <% if user_signed_in? && current_user.id == @country.user_id %>
+            <div class="header-button">
+              <%= link_to "CLOSE Country", country_path(@country), method: :delete %>
+            </div>
+          <% end %>
+        </div>
+    
+        
+      </div>
+
+      <div class="message-box">
+
+        <div class="message-item">
+
+        <div class="message-item-left">
+          <h2 class="name">
+            <p>TITLE</p>
+            <%= @message.title %>
+          </h2>
+        
+
+          <div class="message-img-content">
+            <%= image_tag @message.image.variant(resize: '500x500'), class:"message-box-img" %>
+          </div>
+        
+          <div class="message-explain-box">
+            <p>TEXT</p>
+            <span><%= @message.text %></span>
+          </div>
+
+          <div class="item-choice">
+            <% if user_signed_in? && current_user.id == @message.user_id %>
+            <%#= link_to "編集", edit_country_message_path(@message.id), method: :get, class: "item-red-btn" %>
+            <%#<p class="or-text">or</p>%>
+            <%= link_to "DELETE", country_message_path(@message.id), method: :delete, class:"item-destroy" %>
+            <% end %>
+          </div>
+      
+          <div class="container">
+            <% if user_signed_in? %>
+            <%= form_with(model: [@country, @message, @comment], local: true) do |form| %>
+            <%= form.text_area :text, placeholder: "type a comment", rows: "2" %>
+              <div class="submit-comment">
+                <%= form.submit "SEND" %>
+              </div>
+              <% end %>
+            <% else %>
+              <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+            <% end %>
+          </div>
+        </div>
+      
+        <div class="message-item-right">
+          <div class="comments">
+            <h4>＜Comments＞</h4>
+            <% @comments.each do |comment| %>
+            <p>
+              <strong><%= comment.user.name %>：</strong>
+              <%= comment.text %>
+            </p>
+            <% end %>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
+  <div>
 </div>
