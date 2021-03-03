@@ -45,11 +45,14 @@
    text-decoration: none;
    font-size: 25px;
    color: black;
+   align-items: center;
+
  }
 
 .create-country-header {
-  border: 1px solid #55FFFF;
-  
+  border: 1px solid #7de5e5;
+  width: 20%;
+  margin: 0 auto;
 }
 
 
@@ -314,12 +317,15 @@
   width: 35vw;
   text-align: center;
   margin: 40px 0 20px 20px;
+
 }
 
 .submit-comment {
   margin-top: 20px;
 }
+
 .comments {
+  word-wrap: break-word	;
 }
 
 .message-item {

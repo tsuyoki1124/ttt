@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   def create
     Comment.create(comment_params)
-    redirect_to country_messages_path
+    @message = Message.all
+    redirect_to request.referer
   end
 
   private
