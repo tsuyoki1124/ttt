@@ -6,12 +6,13 @@
   </div>
 
   <div class="right-header">
-      
+      <div class="create-country-box">
         <% if user_signed_in? %>
           <div class="create-country-header">
             <%= link_to "New Country", new_country_path %>
           </div>
         <% end %>
+      </div>
       
 
       <div class="close-country">
@@ -34,8 +35,8 @@
 
 <%= form_with model: [@country, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
-    <%= f.text_field :title, class: 'form-message', placeholder: 'type a title' %>
-    <%= f.text_field :text, class: 'form-message', placeholder: 'type a text' %>
+    <%= f.text_field :title, class: 'form-message1', placeholder: 'type a title' %>
+    <%= f.text_field :text, class: 'form-message2', placeholder: 'type a text' %>
     <label class="form-image">
       <span class="image-file">file</span>
       <%= f.file_field :image, class: 'hidden' %>

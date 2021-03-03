@@ -1,9 +1,9 @@
 .wrapper {
   display: flex;
-  background-image: url("back.jpg");
-    background-size:  cover; 
-    height: 100vh;
-    width: 100vw;
+  background-image: url("1569623.jpg");
+  background-size:  cover; 
+  height: 100vh;
+  width: 100vw;
 }
 
 .side-bar {
@@ -21,6 +21,7 @@
 
 .user {
   border: 1px solid #FF8856;
+  border-radius: 5px;
   padding: 5px;
   background-color: #FF8856;
 }
@@ -33,12 +34,16 @@
 
 .header-name a{
   font-size: 35px;
-  color: #FAFAFA;
+  color: black;
   
 }
 
 .user-name {
   margin-left: 20px;
+}
+
+.create-country-box {
+  width: 30%;
 }
 
  .create-country-header a {
@@ -50,28 +55,35 @@
  }
 
 .create-country-header {
-  border: 1px solid #7de5e5;
-  width: 20%;
-  margin: 0 auto;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
 }
+
 
 
 .create-country a {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 15px;
   font-size: 40px;
   padding: 14px;
-  color: white;
+  color: black;
   text-decoration: none;
   position: fixed;
-  top: 650px;
-  left: 600px;
+  top: 300px;
+  left: 350px;
 }
 
 .create-country-message {
-  color: white;
+  color: black;
   font-size: 20px;
   position: fixed;
-  top: 680px;
-  left: 850px;
+  top: 310px;
+  left: 630px;
 }
 
 .countries {
@@ -81,11 +93,17 @@
 }
 
 .countries p {
-  color: white;
+  color: black;
   font-size: 25px;
-  border: 1px solid white;
+  border: 1px solid black;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
+}
+
+.create-index {
+  text-decoration: none;
+  color: black;
 }
 .country {
   padding: 20px 0 40px;
@@ -93,11 +111,10 @@
 
 .country-name a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 22px;
 }
 .chat {
-  background-color: #FFFFFF;
   width: calc(100vw - 15vw);
 }
 
@@ -122,7 +139,9 @@
 .header-button a {
   text-decoration: none;
   border: 1px solid darkred;
-  color: darkred;
+  border-radius: 10px;
+  background-color: darkred;
+  color: white;
   padding: 20px;
 }
 
@@ -132,13 +151,12 @@
 
 .right-header {
   display: flex;
-  text-align:center;
-  width: 40vw;
+  text-align: center;
   justify-content: space-evenly;
+  width: 40vw;
 }
 
 .messages-wrapper {
-  background-color: #FAFAFA;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
   overflow: scroll;
@@ -184,28 +202,41 @@
   margin-bottom: 40px;
 }
 .form {
-  background-color: #DDDDDD;
+  border-radius: 15px;
   height: 90px;
   padding: 20px 40px;
   display: flex;
+  justify-content: space-between;
 }
 
 .form-input {
-  background-color: white;
   display: flex;
   width: 100%;
+  border-radius: 10px;
 }
 
-.form-message {
+.form-message1 {
+  border: none;
+  height: 50px;
+  width: 60%;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.form-message2 {
   border: none;
   height: 50px;
   width: 100%;
   padding-left: 10px;
+  border-radius: 10px;
+
 }
 
 .form-submit {
   background-color: #38AEF0;
   border: none;
+  border-radius: 7px;
   color: white;
   font-size: 16px;
   height: 50px;
@@ -216,6 +247,7 @@
 .form-image {
   font-size: 12px;
   background-color: lightblue;
+  border-radius: 5px;
   color: white;
   padding: 12px;
   width: 60px;
@@ -230,10 +262,10 @@
 .title {
   font-size: 100px;
   font-family: Times New Roman;
-  color: white;
-  position: fixed;
-  left: 550px;
-  top: 350px;
+  color: black;
+  width: 70%;
+  height: 50%;
+  padding: 50px;
 }
 
 .title-english {
@@ -243,20 +275,19 @@
 
 .user-session {
   position: fixed;
-  top: 650px;
-  left: 550px;
+  top: 300px;
+  left: 350px;
   font-size: 50px;
 }
 
 .post {
-  color: white;
+  color: black;
   text-decoration: none;
   margin-right: 30px;
 }
 
 /* show */
 .message_show {
-  background-color: white;
   height: 100vh;
   width: 85vw;
   background-size:  cover; 
@@ -266,6 +297,12 @@
   height: 100%;
   width: 100vw;
 
+}
+
+.message-item-left {
+  border-radius: 15px ;
+  margin-left:10px;
+  height: 85vh;
 }
 .message-box {
   
@@ -301,9 +338,11 @@
 
 .item-destroy {  
   text-decoration: none;
-  color: red;
+  color: white;
+  background-color: red;
   font-size: 20px;
   border: 1px solid red;
+  border-radius: 10px;
   padding: 7px;
 }
 
@@ -341,5 +380,8 @@
 .comments p {
   font-size: 20px;
   text-align: left;
+}
 
+.comments {
+  font-size: 30px;
 }

@@ -18,7 +18,7 @@
 
 <div class="countries">
 <% if user_signed_in? %>
-  <p>Countries</p> 
+  <p><%= link_to "Country List", root_path, class: 'create-index' %></p> 
     <% @name.each do |country| %>
       <div class="country">
         <div class="country-name">
