@@ -29,6 +29,10 @@ pass:111111
 ![index](https://user-images.githubusercontent.com/77385479/109965878-e8a69480-7d32-11eb-942d-fe2ba719a34d.jpg)
 
 
+## 詳細ページ
+![show](https://user-images.githubusercontent.com/77385479/109967584-f3622900-7d34-11eb-8256-e7c6d366f4c5.jpg)
+
+
 
 
 
