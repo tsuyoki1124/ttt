@@ -24,6 +24,10 @@ pass:111111
 # DEMO
 ## トップページ（ログイン、サインアップ画面）
 ![toppage](https://user-images.githubusercontent.com/77385479/109965603-864d9400-7d32-11eb-8831-3cc65576e9d2.jpg)
+ログイン、サインアップページへ遷移するボタンがある
+
+## トップページ（ログイン後）
+
 
 ## 一覧ページ
 ![index](https://user-images.githubusercontent.com/77385479/109965878-e8a69480-7d32-11eb-942d-fe2ba719a34d.jpg)
