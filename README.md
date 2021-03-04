@@ -13,6 +13,7 @@
 - has_many :room_users
 - has_many :rooms, through: room_users
 - has_many :messages
+- has_many : comments
 
 ## countries テーブル
 
@@ -51,3 +52,15 @@
 
 - belongs_to :country
 - belongs_to :user
+- has_many : comments
+
+## comments テーブル
+
+| Column     | Type       | Options     |
+| ---------- | ---------- | ----------- |
+| user_id    | references | null: false |
+| message_id | references | null: false |
+| text       | text       | null: false |
+
+- belongs_to :user
+- belongs_to :message
