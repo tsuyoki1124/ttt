@@ -27,6 +27,8 @@ pass:111111
 ログイン、サインアップページへ遷移するボタンがある
 
 ## トップページ（ログイン後）
+![afterlogin](https://user-images.githubusercontent.com/77385479/109968337-e98cf580-7d35-11eb-8235-ba92b31591ec.jpg)
+
 
 
 ## 一覧ページ
